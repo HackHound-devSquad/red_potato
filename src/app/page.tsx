@@ -18,7 +18,7 @@ export type Data = {
   image: string
 }
 export default async function Home() {
-  const res = await fetch("http://localhost:4000/db")
+  const res = await fetch("http://4.188.232.104:4000/db")
   const { dessert }: { dessert: Data[] } = await res.json();
   return (
     <div className={`${montserrat.variable} grid bg-black w-full `}>
