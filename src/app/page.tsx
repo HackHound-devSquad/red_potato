@@ -25,8 +25,8 @@ export default async function Home() {
   const res = await fetch("http://4.188.232.104:4000/db")
 
   return (
-    <div className={`${montserrat.variable}  font-montserrat bg-red-500 relative `}>
-      <Image src={burger} alt="hero image" className="w-full h-full object-cover" />
+    <div className={`${montserrat.variable}  hero font-montserrat bg-red-500 w-screen h-screen relative `}>
+      {/* <Image src={burger} alt="hero image" className="w-full h-full object-cover bg-fixed" /> */}
       <div className="absolute bg-black/5 top-0 left-0 w-full h-full ">
         <Navbar />
       </div>

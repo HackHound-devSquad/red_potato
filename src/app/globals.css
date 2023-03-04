@@ -28,3 +28,9 @@
         @apply hover:text-mPrimary transition-colors
     }
   }
+  .hero{
+    background-image: url("./ultra.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }

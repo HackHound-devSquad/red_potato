@@ -21,20 +21,21 @@ function Navbar() {
                 <div>
                     <Image src={logo} className="" alt="logo" width={100} height={100} />
                 </div>
-                <ul className={`flex flex-col items-center md:flex-row gap-8 text-lg absolute top-0 right-0 bg-orange-900/25 backdrop-blur-lg  pt-24 h-screen pr-5 w-[50vw] sm:w-[40vw] transform-gpu transition-transform ${nav ? "translate-x-full" : " translate-x-0 "} text-right  md:translate-x-0  md:backdrop-blur-0 md:h-fit md:pt-0 md:pr-0 md:w-fit md:bg-transparent md:static `}>
-                    <li>
-                        <Link href="/login" className="px-4 py-2 hover:bg-mPrimary/100  bg-mPrimary/90 rounded-xl">
-                            Login
-                        </Link>
-                    </li>
-
+                <ul className={`flex  items-center flex-row gap-8 text-lg  text-right  translate-x-0  backdrop-blur-0 h-fit pt-0 pr-0 w-fit bg-transparent static `}>
+                    <li>Home</li>
                     <li>
                         <button className=" text-4xl relative">
                             <HiOutlineShoppingCart />
                             <span className="w-4 text-black absolute bottom-0 right-0 bg-white rounded-full aspect-square grid place-content-center text-xs">{data}</span>
                         </button>
                     </li>
+                    <li>
+                        <Link href="/login" className="px-4 py-2 hover:bg-mPrimary/100  bg-mPrimary/90 rounded-xl">
+                            Login
+                        </Link>
+                    </li>
                 </ul>
+
                 <ul className="flex gap-3 text-3xl z-20 md:hidden">
                     <button className="  relative">
                         <HiOutlineShoppingCart />
