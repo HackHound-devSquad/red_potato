@@ -9,8 +9,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        mPrimary: "#e39431",
+      },
       fontFamily: {
         montserrat: ["var(--font-montserrat)", "sans-serif"],
+        orbitron: ["var(--font-orbitron)", "sans-serif"],
       },
     },
   },

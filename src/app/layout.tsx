@@ -13,8 +13,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Navbar />
+      <body className="w-screen overflow-x-clip">
+        {/* <Navbar /> */}
         {children}
       </body>
     </html>

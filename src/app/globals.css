@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Firefox */
+* {
+    -webkit-tap-highlight-color: transparent;
+    scrollbar-width: auto;
+    scrollbar-color: #e39431 #56090e;
+  }
+  
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #56090e;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #e39431;
+    border-radius: 0px;
+    border: 9px solid #e39431;
+  }
+  @layer base{
+    header li:not(:last-child) {
+        @apply hover:text-mPrimary transition-colors
+    }
+  }
