@@ -4,9 +4,6 @@ export type Cart = {
   id: number;
   name: string;
   description: string;
-  ingredients: string[];
-  spicy: boolean;
-  vegetarian: boolean;
   price: number;
   image: string;
   quantity: number;

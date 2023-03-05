@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html{
+    scroll-behavior: smooth;
+    background-color: #151515;
+    color: #f8f9fb;
+}
+/* Firefox */
+* {
+    -webkit-tap-highlight-color: transparent;
+    scrollbar-width: auto;
+    scrollbar-color: #e39431 #56090e;
+  }
+  
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #56090e;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #e39431;
+    border-radius: 0px;
+    border: 9px solid #e39431;
+  }
+  @layer base{
+    header li:not(:last-child) {
+        @apply hover:text-mPrimary transition-colors
+    }
+    .hero{
+        @apply grid ;
+        grid-template-rows: auto 1fr;
+        
+        background-image: linear-gradient( #391c039c, #3d270b5c),url("./ultra.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+  }
