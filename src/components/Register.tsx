@@ -24,6 +24,7 @@ const RegisterPage = () => {
      try {
       await signup(email,password)
        router.push('/')
+       localStorage.setItem('user','yash');
      } catch(error)
      {
 console.log(error)
