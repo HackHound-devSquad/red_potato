@@ -4,7 +4,7 @@ function Gyan() {
     return (
         <>
             <hr className='w-1/2 mx-auto mb-14' />
-            <section className="flex flex-col gap-y-7 px-8 gap-x-5 md:pr-14 h-full w-screen items-center  ">
+            <section className="flex flex-col md:flex-row gap-y-7 px-8 gap-x-5 md:pr-14 h-full w-screen items-center  ">
                 <div className="flex-1 rounded-2xl overflow-clip">
                     <Image src={fireburger} className="max-w-[500px] w-[90vw] sm:w-full rounded-2xl overflow-clip  aspect-square mx-auto object-center" alt="fire burger illustration " />
                 </div>

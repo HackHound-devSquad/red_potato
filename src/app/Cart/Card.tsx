@@ -1,6 +1,6 @@
 "use client"
 import { m as motion } from "framer-motion"
-
+import { RiDeleteBin7Line } from "react-icons/ri"
 import { Cart, useTomatoStore } from "@/store/store"
 import Image from "next/image";
 
@@ -33,7 +33,7 @@ function Card(props: Cart) {
                             onClick={() => {
                                 remove(props.id)
                             }}
-                        >Remove</motion.button>
+                        ><RiDeleteBin7Line /></motion.button>
                         <span className="text-2xl font-bold">{props.quantity}</span>
                         <motion.button
                             whileHover={animate}

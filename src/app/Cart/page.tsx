@@ -3,8 +3,10 @@ import { useTomatoStore } from "@/store/store"
 import { useEffect, useState } from "react";
 import Navbar from "../Navbar";
 import Card from "./Card";
+
 function Cart() {
     const data = useTomatoStore(state => state.cart)
+
     const [amount, setAmount] = useState(0);
     useEffect(() => {
         let total = 0;
@@ -13,13 +15,26 @@ function Cart() {
         })
         setAmount(total);
     }, [data])
+
     return (
-        <main className="
-        ">
+        <main className="">
             <Navbar />
             <span className="border-t border-t-mPrimary block w-[95vw] mx-auto h-1 -mt-1" />
             <section>
-                <h1 className="text-center text-4xl font-black text-mPrimary mt-4 font-orbitron tracking-widest">Cart</h1>
+                {data.length === 0 ? <h1 className="text-center text-4xl font-black text-mPrimary mt-4 font-orbitron tracking-widest">Cart is Empty</h1> : <>
+                    <h1 className="text-center text-4xl font-black text-mPrimary mt-4 font-orbitron tracking-widest">Cart</h1>
+                    <div className="grid grid-cols-4 px-10">
+                        {
+                            data.map((item) => {
+                                return <Card {...item} key={item.id} />
+                            })
+                        }
+                    </div>
+                    <div>
+                        <h1 className="text-center text-4xl font-black text-mPrimary mt-4 font-orbitron tracking-widest">Total Amount = {amount}</h1>
+                    </div>
+                </>}
+
             </section>
         </main>
     )

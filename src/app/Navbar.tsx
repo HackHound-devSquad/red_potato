@@ -10,9 +10,9 @@ function Navbar() {
     return (
         <header >
             <nav className="flex justify-between items-center py-4 px-6 text-3xl text-white">
-                <div>
+                <Link href="/">
                     <GiMoonOrbit className="text-6xl  text-mPrimary" />
-                </div>
+                </Link>
                 <ul className={`flex  items-center flex-row gap-8 text-lg  text-right  translate-x-0  backdrop-blur-0 h-fit pt-0 pr-0 w-fit bg-transparent static `}>
                     <li>
                         <Link href="/Cart" className=" text-4xl relative text-mPrimary hover:scale-110 transition-transform">
