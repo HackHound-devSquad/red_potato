@@ -6,7 +6,7 @@ export type Cart = {
   name: string;
   description: string;
   image: string;
-  price: string;
+  price: number;
 };
 type Store = {
   cart: Cart[];

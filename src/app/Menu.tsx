@@ -8,10 +8,10 @@ function Menu({ data }: { data: Data[] }) {
             <p className="flex-1 text-2xl ">Our cosmic food menu takes you on a journey through the stars with every bite.</p>
         </article>
         <section className={` font-playfair flex menu  overflow-scroll overscroll-none gap-5 px-16`}>
-            {data.map((item, index) => {
+            {/* {data.map((item, index) => {
                 item = { ...item, id: index }
                 return <Card {...item} key={index} />
-            })}
+            })} */}
         </section>
     </section>
     )

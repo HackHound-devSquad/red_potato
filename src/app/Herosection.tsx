@@ -8,7 +8,7 @@ const orbitron = Orbitron({
 })
 function Herosection() {
     return (
-        <main className={`${orbitron.variable} font-orbitron hero   bg-red-500 w-screen h-screen relative `}>
+        <main className={` font-orbitron hero   bg-red-500 w-screen h-screen relative `}>
             <Navbar />
             <section className="mt-24">
                 <h1 className="text-center text-7xl font-black text-mPrimary">Orbital Oven</h1>

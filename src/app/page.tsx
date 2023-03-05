@@ -12,7 +12,7 @@ export type Data = {
   name: string;
   description: string;
   image: string;
-  price: string;
+  price: number;
 }
 export default async function Home() {
   const data = [
@@ -20,70 +20,70 @@ export default async function Home() {
       name: "Red Planet Ramen",
       description: "A spicy ramen with a kick of martian heat.",
       image: "/red_planet_ramen.png",
-      price: "79",
+      price: 79,
       id: 0
     },
     {
       name: "Cosmic Lamb Chops",
       description: "Juicy lamb chops with a side of space potatoes and martian garlic sauce.",
       image: "/cosmic_lamb_chops.png",
-      price: "99",
+      price: 99,
       id: 1
     },
     {
       name: "Crater Cakes",
       description: "A delicious dessert made from the finest Martian soil.",
       image: "/craterCakes.png",
-      price: "59",
+      price: 59,
       id: 2
     },
     {
       name: "Thunder Soup",
       description: "Hot and spicy Martian eye soup.",
       image: "/eye_soup.png",
-      price: "99",
+      price: 99,
       id: 3
     },
     {
       name: "Meat Balls for Mars",
       description: "Spicy and Juicy meat balls with a touch martian style",
       image: "/meatball_for_mars.png",
-      price: "69",
+      price: 69,
       id: 4
     },
     {
       name: "Terraformed Truffle Risotto",
       description: "creamy and flavourful Risotto with truffle.",
       image: "/rissotto.png",
-      price: "59",
+      price: 59,
       id: 5
     },
     {
       name: "Marsala Biryani",
       description: "Extra Spicy Marsala Biryani.",
       image: "/Martian_biryani.png",
-      price: "99",
+      price: 99,
       id: 6
     },
     {
       name: "Marsala Spaghetti",
       description: "Spaghetti with fresh tomatoe sauce.",
       image: "/pasta.png",
-      price: "89",
+      price: 89,
       id: 7
     },
     {
       name: "Red Sea Tuna",
       description: "Fresh Tuna from The great Martian Red sea",
       image: "/Red_seafood.png",
-      price: "99",
+      price: 99,
       id: 8
     },
     {
       name: "Interstellar Lobster",
       description: "Hot and juicy Lobster.",
       image: "/Terestrial_red_lobster.png",
-      price: "79",
+      price: 79,
       id: 9
     }
   ]
