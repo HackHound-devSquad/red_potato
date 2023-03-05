@@ -40,4 +40,21 @@ html{
         background-position: center;
         background-attachment: fixed;
       }
+      .card{
+        @apply rounded-3xl bg-[#303030] min-w-fit  my-8  w-fit transition-all hover:scale-105 overflow-clip  flex flex-col pb-4;
+      }
+      .menu::-webkit-scrollbar {
+        display: none !important;
+      }
+      
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .menu {
+        -ms-overflow-style: none !important;  /* IE and Edge */
+        scrollbar-width: none !important;  /* Firefox */
+      }
+      .gyan{
+        background-image: linear-gradient(#00000061,#00000085), url("./bar_bg.png");
+        background-size: cover;
+        background-position: center;
+      }
   }
