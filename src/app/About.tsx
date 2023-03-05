@@ -17,7 +17,7 @@ const marqueeVariants = {
 const About = () => {
     return (
         <>
-            <div className="marquee">
+            <div className="marquee" id="about">
                 <motion.div
                     className="track"
                     variants={marqueeVariants}
