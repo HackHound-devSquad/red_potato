@@ -1,12 +1,12 @@
 import { create } from "zustand";
 import { Data } from "@/app/page";
 export type Cart = {
+  quantity: number;
   id: number;
   name: string;
   description: string;
-  price: number;
   image: string;
-  quantity: number;
+  price: number;
 };
 type Store = {
   cart: Cart[];
