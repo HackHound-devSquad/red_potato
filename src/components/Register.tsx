@@ -1,13 +1,34 @@
+"use client"
 import React, { Fragment, useState } from "react";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import Image from "next/image";
+import useAuthStore from "@/store/authStore";
+import {useRouter} from 'next/navigation'
+
 
 const RegisterPage = () => {
+  const [email, setEmail] = useState("")
+  const [password,setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false);
-
+  const router = useRouter();
+  const signup = useAuthStore((state)=>state.signUp
+  )
+  const user = useAuthStore((state)=>state.user
+  )
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
   };
+
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+     e.preventDefault();
+     try {
+      await signup(email,password)
+       router.push('/')
+     } catch(error)
+     {
+console.log(error)
+     }
+  }
 
   return (
     <Fragment>
@@ -27,7 +48,9 @@ const RegisterPage = () => {
 "
             ></div>
           </div>
-          <form>
+          <form
+          onSubmit={handleSubmit}
+          >
             <div className="mb-4">
               <label
                 htmlFor="email"
@@ -38,7 +61,9 @@ const RegisterPage = () => {
               <input
                 type="text"
                 id="email"
+                name="email"
                 className="w-96 p-2 border text-gray-900 border-gray-300 rounded-lg"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="mb-4">
@@ -52,7 +77,9 @@ const RegisterPage = () => {
                 <input
                   type={showPassword ? "text" : "password"}
                   id="password"
+                  name="password"
                   className="w-full p-2 text-gray-900 border border-gray-300 rounded-lg"
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 <button
                   type="button"
