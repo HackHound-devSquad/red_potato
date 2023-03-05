@@ -8,6 +8,7 @@ const playfair = Playfair_Display({
   variable: "--font-playfair"
 })
 import { Orbitron } from "next/font/google"
+import Footer from "./Footer";
 const orbitron = Orbitron({
   weight: ["400", "500", "600", "700", "900"],
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
         <LazyMotion features={domAnimation} strict>
           {children}
         </LazyMotion>
+        <Footer />
       </body>
     </html>
   );

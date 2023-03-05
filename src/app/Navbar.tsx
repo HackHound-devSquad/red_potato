@@ -1,9 +1,11 @@
 "use client"
+import useAuthStore from "@/store/authStore";
 import { useTomatoStore } from "@/store/store"
 import Link from "next/link";
 import { GiMoonOrbit, GiHamburger } from "react-icons/gi"
 function Navbar() {
-    // get total items in cart by adding all the quantity
+    const user = useAuthStore(state => state.user);
+    console.log(user);
     const totalItems = useTomatoStore(state => state.cart.reduce((ack: number, item) => ack + item.quantity, 0))
     return (
         <header >
@@ -18,11 +20,19 @@ function Navbar() {
                             <span className="w-4 text-black absolute bottom-0 right-0 bg-white rounded-full aspect-square grid place-content-center text-xs">{totalItems}</span>
                         </Link>
                     </li>
-                    <li>
-                        <Link href="/login" className="px-4 py-2 hover:bg-mPrimary/100  bg-mSecondary/90 rounded-xl">
-                            Login
-                        </Link>
-                    </li>
+                    {
+                        user ? <li>
+                            <Link href="/profile" className="px-4 py-2 hover:bg-mPrimary/100  bg-mSecondary/90 rounded-xl">
+                                Profile
+                            </Link>
+                        </li> : <li>
+                            <Link href="/login" className="px-4 py-2 hover:bg-mPrimary/100  bg-mSecondary/90 rounded-xl">
+                                Login
+                            </Link>
+                        </li>
+
+                    }
+
                 </ul>
             </nav>
         </header>

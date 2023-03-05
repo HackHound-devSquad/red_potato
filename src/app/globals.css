@@ -41,7 +41,7 @@ html{
         background-attachment: fixed;
       }
       .card{
-        @apply rounded-3xl bg-[#303030] min-w-fit  my-8  w-fit transition-all hover:scale-105 overflow-clip  flex flex-col pb-4;
+        @apply rounded-3xl bg-[#202020] min-w-fit  my-8  w-fit transition-all hover:scale-105 overflow-clip  flex flex-col pb-4;
       }
       .menu::-webkit-scrollbar {
         display: none !important;
