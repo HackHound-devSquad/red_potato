@@ -37,8 +37,8 @@ We here bring the idea that person entering the restaurant gets to choose the di
 Front-end
 
 - Next.js
-- Tailwind CSS ( DaisyUI )
-- Redux Toolkit
+- Tailwind CSS
+- Zustand
 
 Database(NoSQL)
 
@@ -46,6 +46,7 @@ Database(NoSQL)
   Deployment
 
 - Vercel
+- Azure
 
 ## License
 
