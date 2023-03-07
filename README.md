@@ -16,7 +16,7 @@ This is a online food ordering WebApp built using Next.js, Tailwind CSS and depl
 - [@1708yash](https://github.com/1708yash)
 - [@ujjawalagarwal123](https://github.com/ujjawalagarwal123)
 - [@Harsh-uu](https://github.com/Harsh-uu)
-- [@omdansarijaved](https://github.com/mdansarijaved)
+- [@mdansarijaved](https://github.com/mdansarijaved)
 
 ## The Problem
 
